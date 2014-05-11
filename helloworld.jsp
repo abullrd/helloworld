@@ -28,6 +28,7 @@
         } catch (IOException e) {
         }
       }
+
       try {
         reader = new BufferedReader(new FileReader(new File("/etc/servers.txt")));
         String line = null;
@@ -36,6 +37,7 @@
         }
       } catch (IOException e) {
         // Do nothing
+        e.printStackTrace();
       } finally {
         try {
             if (reader != null) {
