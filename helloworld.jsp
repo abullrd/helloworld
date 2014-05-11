@@ -28,6 +28,22 @@
         } catch (IOException e) {
         }
       }
+      try {
+        reader = new BufferedReader(new FileReader(new File("/etc/servers.txt")));
+        String line = null;
+        while((line = reader.readLine()) != null) {
+          out.println(line);
+        }
+      } catch (IOException e) {
+        // Do nothing
+      } finally {
+        try {
+            if (reader != null) {
+                reader.close();
+            }
+        } catch (IOException e) {
+        }
+      }
     %>
    
     <br>
