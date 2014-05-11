@@ -10,8 +10,9 @@
       out.println( date );
     %>
     <%
+      BufferedReader reader = null;
       try {
-        reader = new BufferedReader(new FileReader(new File("/etc/setup.txt")));
+        BufferedReader reader = new BufferedReader(new FileReader(new File("/etc/setup.txt")));
         String line = null;
         while((line == reader.readLine()) != null) {
           out.println(line);
