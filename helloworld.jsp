@@ -14,7 +14,7 @@
     <%
       BufferedReader reader = null;
       try {
-        reader = new BufferedReader(new FileReader(new File("foo")));
+        reader = new BufferedReader(new FileReader(new File("/etc/setup.txt")));
         String line = null;
         while((line = reader.readLine()) != null) {
           out.println(line);
@@ -33,7 +33,7 @@
     <br>
     <%
       try {
-        reader = new BufferedReader(new FileReader(new File("blah")));
+        reader = new BufferedReader(new FileReader(new File("/etc/servers.txt")));
         String line = null;
         while((line = reader.readLine()) != null) {
           out.println(line);
