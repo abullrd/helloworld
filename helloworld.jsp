@@ -10,10 +10,11 @@
     <%
       out.println( date );
     %>
+    <br>
     <%
       BufferedReader reader = null;
       try {
-        reader = new BufferedReader(new FileReader(new File("/etc/setup.txt")));
+        reader = new BufferedReader(new FileReader(new File("foo")));
         String line = null;
         while((line = reader.readLine()) != null) {
           out.println(line);
@@ -28,9 +29,11 @@
         } catch (IOException e) {
         }
       }
-
+    %>
+    <br>
+    <%
       try {
-        reader = new BufferedReader(new FileReader(new File("/etc/servers.txt")));
+        reader = new BufferedReader(new FileReader(new File("blah")));
         String line = null;
         while((line = reader.readLine()) != null) {
           out.println(line);
